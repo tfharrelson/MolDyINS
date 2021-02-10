@@ -1,0 +1,8 @@
+name         =  25K_test_run
+trr          =  ../../data/25K_NVE/traj_25K.trr
+tpr          =  ../../data/25K_NVE/topol_25K.tpr
+ndx          =  ../../data/25K_NVE/index.ndx
+elements     =  ../../data/elements.txt
+atom_list    =  H
+index_groups =  10
+T            =  10

@@ -10,11 +10,5 @@
 
 module load python3
 module load gromacs
-which python3
-which python
-which srun
-hostname
 
-scriptdir="/home/tfharrel/MD/Scripts/"
-
-srun python ${scriptdir}MD_INS_mpi_new.py ${scriptdir}mdins_input10K.txt
+srun python MD_INS.py mdins_input25K.txt
