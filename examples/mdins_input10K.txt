@@ -1,0 +1,8 @@
+name         =  crys_p3ht_10K_pRelax_ani_xxyyzz_xy_anderson
+trr          =  traj_10K_pRelax_ani_xxyyzz_xy_anderson.trr
+tpr          =  topol_10K_pRelax_ani_xxyyzz_xy_anderson.tpr
+ndx          =  index.ndx
+elements     =  elements.txt
+atom_list    =  H
+index_groups =  10
+T            =  10
