@@ -1,4 +1,7 @@
 import numpy as np
+from scipy import signal, integrate
+import scipy.constants as const
+
 
 class Atom:
     def __init__(self,atomsym):
@@ -24,7 +27,10 @@ class Atom:
     
     def assignAtomNum(self,atomnum):
         self.atomNum = atomnum
-    
+
+    def assignTemperature(self, temp):
+        self.T = temp
+
     def writePowSpecFile(self):
         filename = 'temp' + self.atomNum + 'powspec.txt'
         file_writer = open(filename,'w')
@@ -73,7 +79,7 @@ class Atom:
             self.Slaw = np.zeros(len(self.powspec[0,0,:]))
 
     def createF1(self):
-        self.f1 = 2*10**12*const.hbar/(2*self.freqs*const.Boltzmann*T)*self.powspec
+        self.f1 = 2*10**12*const.hbar/(2*self.freqs*const.Boltzmann*self.T)*self.powspec
         self.f1[:,:,0]=0.0
     
     def initializeFn(self):

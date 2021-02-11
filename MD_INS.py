@@ -445,9 +445,10 @@ for atom in atom_list:
     print("rank = ")
     print(rank)
     if rank == 0:
-        #traj_file=createVelocities(trr_file,tpr_file,ndx_file,index_groups[i],mpi_Flag)
-        print("getting time list from velocity file...")
-        traj_file = 'vels.xvg'
+        print('Creating velocities using gmx traj')
+        traj_file=createVelocities(trr_file,tpr_file,ndx_file,index_groups[i],mpi_Flag)
+#        print("getting time list from velocity file...")
+        #traj_file = 'vels.xvg'
         timelist = find_n_timesteps(traj_file)
         n_timesteps = len(timelist)
     else:

@@ -1,4 +1,7 @@
 import numpy as np
+import subprocess
+import math
+import scipy.constants as const
 
 def create_index_groups(val):
     global index_groups
@@ -58,13 +61,19 @@ def find_n_timesteps(traj_file):
             timelist = np.append(timelist,float(line.split()[0]))
     return timelist
 
-def parseVelocities(n_atoms):
+def parseVelocities(n_atoms, n_timesteps, mem_core=3e8, size=1):
 
-#        this routine is for creating blocks of atoms to be read simultaneously by
-#        rest of code.
-#        Output is an array with size = [n_blocks, 2] where each row has both the
-#                first and last column indices of the full vels.xvg file for a 
-#                particular block.
+#   Create blocks of atoms to be passed to MPI ranks for parallel calculation of rest of code.
+#
+#   Params:
+#   n_atoms:        number of atoms in the MD trajectory
+#   n_timesteps:    number of time steps saved during the the MD simulation
+#   mem_core:       max size of memory block used in each MPI process. Due to overhead concerns, choose a value that is at most half the actual max size. Default is 300 MB.
+#   size:           number of MPI ranks used in calculation. Default is 1 (no MPI)
+#
+#   Return: an array with size = [n_blocks, 2] where each row has both the
+#           first and last column indices of the full vels.xvg file for a 
+#           particular block.
     if n_timesteps < 0:
         print('num timesteps not computed yet!! compute first before running this routine')
     max_cols = int(np.floor(mem_core/(8.*n_timesteps)*size))
