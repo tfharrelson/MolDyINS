@@ -1,4 +1,4 @@
-# MD_INS
+# MolDyINS
 code for converting Gromacs molecular dynamics trajectories into inelastic neutron scattering spectra generated at the indirect geometry spectrometers like VISION at ORNL or TOSCA at ISIS. The code is set up for calculation of the dynamic structure factor within the incoherent approximation. The code is not available on pip or conda at the moment. 
 
 ### Prerequisites
@@ -19,11 +19,11 @@ This command creates a conda virtual environment named `myenv` with the prerequi
 
 Then clone this repository onto the machine that you want to run the calculation using:
 
-`git clone git@github.com:tfharrelson/MD_INS`
+`git clone git@github.com:tfharrelson/MolDyINS`
 
 ### Usage
 
-`python MD_INS.py mdins_input.txt`
+`python MolDyINS.py mdins_input.txt`
 
 where `mdins_input.txt` is an input file containing user-defined options (see more below) that control the action of the code.
 
