@@ -61,28 +61,16 @@ If you use this code, please cite our article in Scientific Reports located [her
 
 If using BibTeX, then feel free to add the following text to the bibliography file.
 
-> @article{harrelson_scirep21,
-> 
-> author = {Harrelson, Thomas F. and Dettmann, Makena and Scherer, Christoph and Andrienko, Denis and Moul{\'{e}}, Adam J. and Faller, Roland},
-> 
-> doi = {10.1038/s41598-021-86771-5},
-> 
-> issn = {2045-2322},
-> 
-> journal = {Scientific Reports},
-> 
-> month = {apr},
-> 
-> number = {1},
-> 
-> pages = {7938},
-> 
-> title = {{Computing inelastic neutron scattering spectra from molecular dynamics trajectories}},
-> 
-> url = {http://www.nature.com/articles/s41598-021-86771-5},
-> 
-> volume = {11},
-> 
-> year = {2021}
-> 
+> @article{harrelson_scirep21,  
+> author = {Harrelson, Thomas F. and Dettmann, Makena and Scherer, Christoph and Andrienko, Denis and Moul{\'{e}}, Adam J. and Faller, Roland},  
+> doi = {10.1038/s41598-021-86771-5},  
+> issn = {2045-2322},  
+> journal = {Scientific Reports},  
+> month = {apr},  
+> number = {1},  
+> pages = {7938},  
+> title = {{Computing inelastic neutron scattering spectra from molecular dynamics trajectories}},  
+> url = {http://www.nature.com/articles/s41598-021-86771-5},  
+> volume = {11},  
+> year = {2021}  
 > }
