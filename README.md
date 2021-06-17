@@ -1,5 +1,5 @@
 # MolDyINS
-code for converting Gromacs molecular dynamics trajectories into inelastic neutron scattering spectra generated at the indirect geometry spectrometers like VISION at ORNL or TOSCA at ISIS. The code is set up for calculation of the dynamic structure factor within the incoherent approximation. The code is not available on pip or conda at the moment. 
+Code for converting Gromacs molecular dynamics trajectories into inelastic neutron scattering spectra generated at the indirect geometry spectrometers like VISION at ORNL or TOSCA at ISIS. The code is set up for calculation of the dynamic structure factor within the incoherent approximation. Full details regarding our formulation and approximations is [here](https://doi.org/10.1038/s41598-021-86771-5). The code is not available on pip or conda at the moment. 
 
 ### Prerequisites
 - Numpy
@@ -57,4 +57,4 @@ There exists a way to "hack" the code to arbitrarily amplify, or suppress the co
 
 ### Citing us
 
-The manuscript is currently under review (wish us luck!) and we will post the link to the paper, and appropriate citation when it's ready.
+If you use this code, please cite our article in Scientific Reports located [here](https://doi.org/10.1038/s41598-021-86771-5).
